@@ -7,13 +7,24 @@
 
     <link rel="icon" href="">
     <link rel="stylesheet" type="image/png" href="https://www.google.com/s2/u/0/favicons?domain=">
+    <link rel="stylesheet" href="style.css">
     <title>Weather App</title>
 </head>
 <body>
+    <div class="header">
     <div class="greating" id="greating">
-        <h2>Good Morning</h2>
-        <p class="date" id="date">date</p>
+        <h2 class="greating-header">Good Morning</h2>
+        <p class="date" id="date">July 19, 2022</p>
     </div>
+    <div class="search" id="search">
+        <form action="index.php" method="post">
+            <input type="text" name="city" placeholder="Enter city name">
+            <input type="submit" name="submit" value="Search">
+        </form>
+    </div>
+</div>
+
+<div class="weather" id="weather">
     <section class="weather-container" id="weather-container">
         <div class="weather-info" id="weather-info">
             <div class="weather-info-header" id="weather-info-header">
@@ -47,6 +58,7 @@
                 </div>
             
     </section>
+    </div>
     
     
     <script src="script.js"></script>
