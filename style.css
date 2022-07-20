@@ -20,6 +20,8 @@ body{
     display: flex;
     flex-direction: column;
 }
+
+/* Header */
 .header{
     background-color: #f5f5f5;
     display: flex;
@@ -48,7 +50,51 @@ line-height: 3.1rem;
     justify-content: space-between;
     margin: 3rem;
     padding: 1rem;
+}
+
+.city{
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4.9rem;
+}
+
+/* weather card */
+
+.weather-card{
+    display: flex;
+    justify-content: space-between;
+    background: #FFFFFF;
+    width: 372px;
+    height: 308px;
+    border-radius: 3rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);        
+}
+
+.weather-illustration{
+    display: flex;
+    align-self: flex-end ;
+    width: 65%;
+    height: 65%;
+    margin-bottom: 15px;
+}
+
+.temperature{
+    margin-left: 3.5rem;
+    margin-top: 3.5rem;
+}
+
+.temp-type{
+    font-weight: 500;
+        font-size: 2.4rem;
+        line-height: 3.1rem;
+}
+
+.temp-number{
+    font-weight: 700;
+        font-size: 4.8rem;
+        line-height: 6.2rem;
     
+        color: #FF868C;
 }
 
 

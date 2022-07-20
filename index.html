@@ -11,6 +11,8 @@
     <title>Weather App</title>
 </head>
 <body>
+
+    <!-- Heeader -->
     <div class="header">
     <div class="greating" id="greating">
         <h2 class="greating-header">Good Morning</h2>
@@ -24,20 +26,25 @@
     </div>
 </div>
 
+
+<!-- weather card -->
 <div class="weather" id="weather">
     <section class="weather-container" id="weather-container">
         <div class="weather-info" id="weather-info">
             <div class="weather-info-header" id="weather-info-header">
-                <h2 class="city" id="city">City</h2>
+                <h2 class="city" id="city">Kyoto</h2>
             </div>
-            <div class="weather-info-body" id="weather-info-body">
-                    <p class="temp-type" id="temp-type">Temp Type</p>
-                    <p class="temp" id="temp">Temp</p>
+            <div class="weather-card" id="weather-card">
+                <div class="temperature" id="temperature">
+                    <p class="temp-type" id="temp-type">Sunny</p>
+                    <p class="temp-number" id="temp-number">32</p>
+                </div>
                     <img src="/weather illustrations/WeatherMorningHot1.svg" alt="" class="weather-illustration" id="weatherillustration">
             </div>
         </div>
     </section>
     
+    <!-- hourly forecast container -->
     <section class="hourly-forecast-container" id="hourly-forecast-container">
             <div class="hourly-forecast-container" id="hourly-forecast-container">
                         <div class="hourly-forecast-body-item" id="hourly-forecast-body-item">
@@ -60,6 +67,7 @@
     </section>
     </div>
     
+    <!-- script -->
     
     <script src="script.js"></script>
 </body>
