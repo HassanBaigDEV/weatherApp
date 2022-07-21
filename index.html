@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Weather App</title>
 </head>
+
 <body>
 
     <!-- Heeader -->
@@ -26,49 +28,52 @@
     </div>
 </div>
 
+<body>
 
-<!-- weather card -->
-<div class="weather" id="weather">
-    <section class="weather-container" id="weather-container">
-        <div class="weather-info" id="weather-info">
-            <div class="weather-info-header" id="weather-info-header">
-                <h2 class="city" id="city">Kyoto</h2>
+    <div class="container_main">
+        <!-- Heeader -->
+        <div class="header">
+            <div class="greating" id="greating">
+                <h2 class="greating-header">Good Morning</h2>
+                <p class="date" id="date">July 19, 2022</p>
             </div>
-            <div class="weather-card" id="weather-card">
-                <div class="temperature" id="temperature">
-                    <p class="temp-type" id="temp-type">Sunny</p>
-                    <p class="temp-number" id="temp-number">32</p>
-                </div>
-                    <img src="/weather illustrations/WeatherMorningHot1.svg" alt="" class="weather-illustration" id="weatherillustration">
+            <div class="search" id="search">
+                <form action="" method="post">
+                    <input type="text" name="city" placeholder="Enter city name">
+                    <input type="submit" name="submit" value="Search">
+                </form>
             </div>
         </div>
-    </section>
-    
-    <!-- hourly forecast container -->
-    <section class="hourly-forecast-container" id="hourly-forecast-container">
-            <div class="hourly-forecast-container" id="hourly-forecast-container">
-                        <div class="hourly-forecast-body-item" id="hourly-forecast-body-item">
-                            <p class="hourly-forecast-body-item-time" id="hourly-forecast-body-item-time">Time</p>
-                            <img src="/icons/cloud-drizzle.svg" alt="" class="hourly-weather-icon">
-                            <p class="hourly-forecast-body-item-temp" id="hourly-forecast-body-item-temp">Temp</p>
-                        
+        <div class="grid_container">
+            <!-- weather card -->
+            <div class="weather_card_container">
+                <h2 class="weather_card_city_name" id="weather_card_city_name">Kyoto</h2>
+                <div class="weather_card">
+                    <div class="weather_card_stats">
+                        <p class="weather_card_stats_condtion" id="weather_card_stats_condtion">Sunny</p>
+                        <p class="weather_card_stats_temperature" id="weather_card_stats_temperature">32<sup>°</sup>C
+                        </p>
+                    </div>
+                    <div class="weather_card_illustration">
+                        <img src="./weather-illustrations/WeatherMorningHot1.svg">
                     </div>
                 </div>
+            </div>
 
-                <div class="weather-details-container" id="weather-details-container">
-                        <p class="wind" id="wind">Wind</p>
-                        <p class="humidity" id="humidity">Humidity</p>
-                        <p class="visibility" id="visibility">Visibility</p>
-                        <p class="sunrise" id="sunrise">Sunrise</p>
-                        <p class="sunset" id="sunset">Sunset</p>
-                   
-                </div>
-            
-    </section>
+            <!-- hourly forecast container -->
+            <div class="hourly_forecast_container" id="hourly_forecast_container">
+
+                
+            </div>
+            <div class="weather_general_stats">
+               
+            </div>
+        </div>
     </div>
-    
+
     <!-- script -->
-    
+
     <script src="script.js"></script>
 </body>
+
 </html>

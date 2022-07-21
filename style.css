@@ -1,16 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
 
-*{
-    box-sizing: inherit;
-    padding: 0;
-    margin: 0;
+:root {
+  --white: hsl(0, 0%, 100%);
+  --dark-grey: hsl(206, 57%, 14%);
+  --grey: hsl(0, 0%, 38%);
+  --black: hsl(0, 0%, 0%);
+  --primary: hsl(357, 100%, 76%);
+
 }
 
-html{
-    box-sizing: border-box;
-    font-size: 62.5%;
+* {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
 }
 
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+=======
 body{
     font-family: 'IBM Plex Sans', sans-serif;
     font-style: normal;   
@@ -18,19 +27,38 @@ body{
     background-color: whitesmoke;
     display: flex;
     flex-direction: column;
+
+}
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-style: normal;
+  background-color: var(--white);
+  margin: calc(100vw - 95vw);
+
+}
+
+.container_main{
+
+
+
 }
 
 /* Header */
-.header{
-    background-color: #f5f5f5;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 11rem;
-    margin-top: 2rem;
-    margin-left: 3rem;
-    margin-right: 2rem;
-    padding: 1rem;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15vh;
+
 }
+
+.greating-header {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 2.2rem, 3rem);
+  line-height: 3.1rem;
+=======
 .greating-header{
     color: #FF868C;
     font-weight: 700;
@@ -50,15 +78,44 @@ body{
     justify-content: space-between;
     margin: 3rem;
     padding: 1rem;
+
 }
 
-.city{
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 4.9rem;
+.date {
+  font-family: 'IBM Plex Sans Condensed';
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+
 }
 
+/* grid */
+.grid_container{
+  display: grid;
+  grid-template-areas: 'weather_card_container weather_card_container hourly_forecast_container hourly_forecast_container'
+                       'weather_card_container weather_card_container weather_general_stats weather_general_stats';
+  gap: 10rem;
+  background-color: antiquewhite;
+
+}
 /* weather card */
+
+
+.weather_card_container {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+  background-color: beige;
+  grid-area: weather_card_container;
+}
+
+.weather_card {
+  display: flex;
+  flex-direction: column;
+  width: calc(18vw + 8rem);
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
 .weather-card{
     display: flex;
@@ -76,12 +133,24 @@ body{
     width: 65%;
     height: 65%;
     margin-bottom: 2.4rem;
+
 }
 
-.temperature{
-    margin-left: 3.5rem;
-    margin-top: 3.5rem;
+.weather_card_city_name {
+  font-size: clamp(1.6rem, 2vw, 3rem);
+  margin-bottom: 1rem;
 }
+
+
+.weather_card_stats {
+  margin-top: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.weather_card_stats_condtion {
+  font-weight: 500;
+  font-size: clamp(1.2rem, 1.4rem, 1.6rem);
+  color: var(--grey);
 
 .temp-type{
     font-weight: 500;
@@ -93,7 +162,54 @@ body{
     font-weight: 700;
     font-size: 4.8rem;
     line-height: 6.2rem;
-    color: #FF868C;
+
 }
 
+.weather_card_stats_temperature {
+  font-weight: 700;
+  font-size: clamp(2rem, 3.4rem, 3.6rem);
+  color: var(--primary);
+}
 
+.weather_card_illustration {
+  margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
+
+}
+
+.weather_card_illustration>img {
+  width: calc(36% + 5rem);
+  float: right;
+  margin-top: -1.5rem;
+}
+
+@media screen and (max-width : 50em) {
+  .header{
+    margin-bottom: 2rem;
+  }
+  .weather_card {
+    width: min(95vw, 35rem);
+  }
+
+  .weather_card {
+    margin: 0 auto;
+  }
+  .grid_container{
+    grid-template-areas: 'weather_card_container'
+                         'hourly_forecast_container'
+                         'weather_general_stats';
+    gap: 2rem;
+  }
+}
+
+/* hourly forecast container */
+.hourly_forecast_container{
+  height: 100%;
+  background: navajowhite;
+  grid-area:hourly_forecast_container ;
+
+}
+.weather_general_stats{
+  background-color: burlywood;
+  grid-area: weather_general_stats;
+}
