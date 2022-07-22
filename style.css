@@ -15,11 +15,11 @@
   margin: 0;
 }
 
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
 }
-
 body {
   font-family: 'IBM Plex Sans', sans-serif;
   font-style: normal;
@@ -28,7 +28,11 @@ body {
 
 }
 
-.container_main {}
+
+.container_main{
+
+}
+
 
 /* Header */
 .header {
@@ -44,6 +48,14 @@ body {
   font-weight: 700;
   font-size: clamp(1.6rem, 2.2rem, 3rem);
   line-height: 3.1rem;
+}
+
+.weather{
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem;
+    padding: 1rem;
+
 }
 
 .date {
@@ -65,6 +77,7 @@ body {
 
 /* weather card */
 
+
 .weather_card_container {
   display: flex;
   flex-direction: column;
@@ -80,12 +93,25 @@ body {
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    border-radius: 3rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);        
+}
+
+.weather-illustration{
+    display: flex;
+    align-self: flex-end ;
+    width: 65%;
+    height: 65%;
+    margin-bottom: 2.4rem;
+
 }
 
 .weather_card_city_name {
   font-size: clamp(1.6rem, 2vw, 3rem);
   margin-bottom: 1rem;
 }
+
 
 .weather_card_stats {
   margin-top: 1.5rem;
@@ -96,6 +122,18 @@ body {
   font-weight: 500;
   font-size: clamp(1.2rem, 1.4rem, 1.6rem);
   color: var(--grey);
+}
+.temp-type{
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 3.1rem;
+}
+
+.temp-number{
+    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 6.2rem;
+
 }
 
 .weather_card_stats_temperature {
