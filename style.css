@@ -312,6 +312,7 @@ input[type=submit] {
   .hourly_forecast_container::-webkit-scrollbar-thumb:hover {
     background: rgba(85, 85, 85, 0);
     margin-right: -2vw;
+    
   }
 
   input[type=search]{
