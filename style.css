@@ -315,6 +315,6 @@ input[type=submit] {
   }
 
   input[type=search]{
-    width:calc(100vw - 95vw + 12rem);
+    width:calc(100vw - 95vw + 10rem);
   }
 }
